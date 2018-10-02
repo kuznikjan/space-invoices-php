@@ -1,6 +1,8 @@
 <?php
 namespace Spaceinvoices;
 
+include("./space-invoices-php/vendor/autoload.php");
+
 abstract class ApiResource {
 	public static function _POST($url,$body = '{}') {
 
@@ -8,13 +10,11 @@ abstract class ApiResource {
 
 
 		$response = \Httpful\Request::post($real_url)
-			    ->sendsJson()
-			    ->body($body)
-			    ->addHeader('Authorization', \Spaceinvoices\Spaceinvoices::getAccessToken())
-			    ->send();
+			->sendsJson()
+			->body($body)
+			->addHeader('Authorization', \Spaceinvoices\Spaceinvoices::getAccessToken())
+			->send();
 		return $response;
-
-
 	}
 	public static function _GET($url,$params = null) {
 		$real_url = \Spaceinvoices\Spaceinvoices::$apiBaseUrl.$url;
@@ -25,19 +25,19 @@ abstract class ApiResource {
 		}
 
 		$response = \Httpful\Request::get($real_url)
-			  ->expectsJson()
-			  ->addHeader('Authorization', \Spaceinvoices\Spaceinvoices::getAccessToken())
-			  ->send();
+			->expectsJson()
+			->addHeader('Authorization', \Spaceinvoices\Spaceinvoices::getAccessToken())
+			->send();
 		return $response;
 
 	}
 	public static function _PUT($url,$body = '{}') {
 		$real_url = \Spaceinvoices\Spaceinvoices::$apiBaseUrl.$url;
 		$response = \Httpful\Request::put($real_url)
-			  ->sendsJson()
-			  ->body($body)
-			  ->addHeader('Authorization', \Spaceinvoices\Spaceinvoices::getAccessToken())
-			  ->send();
+			->sendsJson()
+			->body($body)
+			->addHeader('Authorization', \Spaceinvoices\Spaceinvoices::getAccessToken())
+			->send();
 		return $response;
 	}
 
@@ -46,9 +46,30 @@ abstract class ApiResource {
 
 
 		$response = \Httpful\Request::delete($real_url)
-			  ->expectsJson()
-			  ->addHeader('Authorization', \Spaceinvoices\Spaceinvoices::getAccessToken())
-        ->send();
+			->expectsJson()
+			->addHeader('Authorization', \Spaceinvoices\Spaceinvoices::getAccessToken())
+			->send();
+		return $response;
+	}
+
+	public static function _PDF($url,$lang) {
+
+		$real_url = \Spaceinvoices\Spaceinvoices::$apiBaseUrl.$url;
+
+		if ($lang) {
+			$response = \Httpful\Request::get($real_url)
+				->sendsJson()
+				->body('{}')
+				->addHeader('Authorization', \Spaceinvoices\Spaceinvoices::getAccessToken())
+				->addHeader('l', $lang)
+				->send();
+		} else {
+			$response = \Httpful\Request::get($real_url)
+				->sendsJson()
+				->body('{}')
+				->addHeader('Authorization', \Spaceinvoices\Spaceinvoices::getAccessToken())
+				->send();
+		}
 		return $response;
 	}
 }
