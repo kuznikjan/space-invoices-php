@@ -1,0 +1,20 @@
+{
+	"name" : "spaceinvoices/spaceinvoices-php",
+	"description" : "Space invoices PHP sdk",
+	"keywords" : [
+		"space",
+    "invoices",
+    "api",
+    "wrapper",
+    "bills",
+    "invoicing"
+	],
+	"license" : "MIT",
+  "require": {
+      "php": ">=5.6.25",
+      "nategood/httpful": "^0.2.20"
+  },
+  "autoload": {
+    "psr-4": { "Spaceinvoices\\" : "lib/" }
+	}
+}
