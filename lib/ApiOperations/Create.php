@@ -4,7 +4,7 @@ namespace Spaceinvoices\ApiOperations;
 trait Create
 {
   /**
-   * @param string $organizationId ID of your Organization
+   * @param string $organizationId ID of Organization
    * @param object $data
    *
    * @return object Returns data of created element as object
