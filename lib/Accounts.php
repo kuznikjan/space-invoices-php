@@ -8,7 +8,7 @@ class Accounts extends ApiResource {
 	use ApiOperations\GetById;
 
   /**
-   * @param object $data Email and password
+   * @param object $data Object containing Email and password
    *
    * @return object Returns access token and user ID
   */
@@ -17,7 +17,7 @@ class Accounts extends ApiResource {
   }
 
   /**
-   * @param object $data Email and password
+   * @param object $data Object containing Email and password
    *
    * @return object Returns access token and user ID of created user
   */

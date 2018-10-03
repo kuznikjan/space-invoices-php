@@ -3,9 +3,7 @@ namespace Spaceinvoices;
 
 abstract class ApiResource {
 	public static function _POST($url,$body = '{}') {
-
 		$real_url = \Spaceinvoices\Spaceinvoices::$apiBaseUrl.$url;
-
 
 		$response = \Httpful\Request::post($real_url)
 			->sendsJson()
@@ -27,10 +25,10 @@ abstract class ApiResource {
 			->addHeader('Authorization', \Spaceinvoices\Spaceinvoices::getAccessToken())
 			->send();
 		return $response;
-
 	}
 	public static function _PUT($url,$body = '{}') {
 		$real_url = \Spaceinvoices\Spaceinvoices::$apiBaseUrl.$url;
+
 		$response = \Httpful\Request::put($real_url)
 			->sendsJson()
 			->body($body)
@@ -42,7 +40,6 @@ abstract class ApiResource {
 	public static function _DELETE($url) {
 		$real_url = \Spaceinvoices\Spaceinvoices::$apiBaseUrl.$url;
 
-
 		$response = \Httpful\Request::delete($real_url)
 			->expectsJson()
 			->addHeader('Authorization', \Spaceinvoices\Spaceinvoices::getAccessToken())
@@ -51,7 +48,6 @@ abstract class ApiResource {
 	}
 
 	public static function _PDF($url,$lang) {
-
 		$real_url = \Spaceinvoices\Spaceinvoices::$apiBaseUrl.$url;
 
 		if ($lang) {

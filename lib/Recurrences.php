@@ -9,7 +9,7 @@ class Recurrences extends ApiResource {
 	use ApiOperations\Delete;
 
   /**
-   * @param string $documentId ID of Document for which we are creting the Recurrence
+   * @param string $documentId ID of Document we are creating Recurrence for
    * @param object $data
    *
    * @return object Returns object data of created Recurrence

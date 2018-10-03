@@ -10,7 +10,7 @@ class Payments extends ApiResource {
 	use ApiOperations\Edit;
 
   /**
-   * @param string $documentId ID of Document for which we are creting the Payment
+   * @param string $documentId ID of Document we are creating Payment for
    * @param object $data
    *
    * @return object Returns object data of created Payment

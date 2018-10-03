@@ -23,7 +23,7 @@ class Spaceinvoices
     /**
      * Gets the accessToken to be used for requests.
      *
-     * @param string $accessToken
+     * @return string $accessToken
      */
     public static function getAccessToken()
     {
@@ -39,6 +39,7 @@ class Spaceinvoices
     {
         self::$accessToken = $accessToken;
     }
+
     /**
      *  @return string The API version used for requests. null if we're using the
      *    latest version.
@@ -47,6 +48,7 @@ class Spaceinvoices
     {
         return self::$apiVersion;
     }
+
     /**
      * @param string $apiVersion The API version to use for requests.
      */

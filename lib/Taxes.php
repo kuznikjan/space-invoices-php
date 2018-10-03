@@ -12,7 +12,7 @@ class Taxes extends ApiResource {
 
   /**
    * @param string $taxId ID of Tax for which we are creting the Rate
-   * @param object $taxRate	Rate of tax
+   * @param object $taxRate	Rate of Tax
    *
    * @return object Returns object data of created TaxRate
   */

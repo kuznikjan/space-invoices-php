@@ -12,9 +12,9 @@ class Documents extends ApiResource {
 	use ApiOperations\GetById;
 
   /**
-   * @param string $documentId ID of document
+   * @param string $documentId ID of Document
    * @param object $data
-	 * @param object $lang Language of document
+	 * @param string $lang Language of Document
    *
    * @return object
   */
@@ -26,10 +26,10 @@ class Documents extends ApiResource {
 	}
 
 	/**
-   * @param string $documentId ID of document
-	 * @param object $lang Language of PDF document
+   * @param string $documentId ID of Document
+	 * @param string $lang Language of PDF Document
    *
-   * @return \Httpful\Response Returns object data of PDF of document
+   * @return \Httpful\Response Returns object data of PDF of Document
   */
 
 	public static function getPdf($documentId, $lang = false) {
