@@ -9,7 +9,7 @@ trait All
    *
    * @return object Returns all data as object
   */
-  public static function all($organizationId, $queryParams) {
+  public static function all($organizationId, $queryParams = array()) {
     return parent::_GET("/organizations/".$organizationId."/".static::path, $queryParams)->body;
   }
 

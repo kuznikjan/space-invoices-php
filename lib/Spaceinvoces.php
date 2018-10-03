@@ -25,7 +25,7 @@ class Spaceinvoices
      *
      * @param string $accessToken
      */
-    public static function getAccessToken($accessToken)
+    public static function getAccessToken()
     {
         return self::$accessToken;
     }

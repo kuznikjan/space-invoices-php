@@ -37,7 +37,7 @@ class Accounts extends ApiResource {
   /**
    * @return object Returns list of organizations
   */
-  public static function listOrganizations($id) {
+  public static function listOrganizations() {
     return parent::_GET("/".static::path."/organizations")->body;
 	}
 }

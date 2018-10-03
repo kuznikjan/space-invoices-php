@@ -1,8 +1,6 @@
 <?php
 namespace Spaceinvoices;
 
-include("./space-invoices-php/vendor/autoload.php");
-
 abstract class ApiResource {
 	public static function _POST($url,$body = '{}') {
 
