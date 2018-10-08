@@ -5,7 +5,7 @@ namespace Spaceinvoices;
 class Recurrences extends ApiResource {
   const path = "recurrences";
 
-  use ApiOperations\All;
+  use ApiOperations\Find;
 	use ApiOperations\Delete;
 
   /**

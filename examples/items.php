@@ -32,7 +32,7 @@ $itemId = $create->id;
 var_dump($create);
 
 echo "\n================= Get all =================\n";
-$all = Spaceinvoices\Items::all($testOrganizationId);
+$all = Spaceinvoices\Items::find($testOrganizationId);
 var_dump($all);
 
 echo "\n================= Edit =================\n";
@@ -40,7 +40,7 @@ $edit = Spaceinvoices\Items::edit($itemId, $testItemDataEdit);
 var_dump($edit);
 
 echo "\n================= Get all with filters =================\n";
-$all = Spaceinvoices\Items::all($testOrganizationId, $testFilter);
+$all = Spaceinvoices\Items::find($testOrganizationId, $testFilter);
 var_dump($all);
 
 echo "\n================= Search =================\n";

@@ -48,7 +48,7 @@ $docId = $create->id;
 var_dump($create);
 
 echo "================= Get all =================";
-$all = Spaceinvoices\Documents::all($testOrganizationId, $testDocumentFilter);
+$all = Spaceinvoices\Documents::find($testOrganizationId, $testDocumentFilter);
 var_dump($all);
 
 
@@ -58,7 +58,7 @@ var_dump($edit);
 
 
 echo "================= Get all with filters =================";
-$all = Spaceinvoices\Documents::all($testOrganizationId, $testDocumentFilter);
+$all = Spaceinvoices\Documents::find($testOrganizationId, $testDocumentFilter);
 var_dump($all);
 
 

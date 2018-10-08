@@ -10,7 +10,7 @@ class Companies extends ApiResource {
    *
    * @return object Returns list of Companies
   */
-  public static function all($filter = array()) {
+  public static function find($filter = array()) {
     return parent::_GET("/".static::path, $filter)->body;
   }
 

@@ -16,6 +16,6 @@ $create = Spaceinvoices\Organizations::create($testAccountId, $testOrgData);
 var_dump($create);
 
 echo "================= All =================";
-$list = Spaceinvoices\Organizations::all($testAccountId);
+$list = Spaceinvoices\Organizations::find($testAccountId);
 var_dump($list);
 ?>

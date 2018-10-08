@@ -8,7 +8,7 @@ class Currencies extends ApiResource {
   /**
    * @return object Returns list of Currencies
   */
-  public static function all() {
+  public static function find() {
     return parent::_GET("/".static::path)->body;
   }
 

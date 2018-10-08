@@ -1,7 +1,7 @@
 <?php
 namespace Spaceinvoices\ApiOperations;
 
-trait All
+trait Find
 {
   /**
    * @param string $organizationId ID of your Organization
@@ -9,7 +9,7 @@ trait All
    *
    * @return object Returns all data as object
   */
-  public static function all($organizationId, $queryParams = array()) {
+  public static function find($organizationId, $queryParams = array()) {
     return parent::_GET("/organizations/".$organizationId."/".static::path, $queryParams)->body;
   }
 

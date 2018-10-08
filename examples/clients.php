@@ -33,7 +33,7 @@ $clientId = $create->id;
 var_dump($create);
 
 echo "================= Get all =================";
-$all = Spaceinvoices\Clients::all($testOrganizationId);
+$all = Spaceinvoices\Clients::find($testOrganizationId);
 var_dump($all);
 
 echo "================= Edit =================";
@@ -41,7 +41,7 @@ $edit = Spaceinvoices\Clients::edit($clientId, $testClientDataEdit);
 var_dump($edit);
 
 echo "================= Get all with filters =================";
-$all = Spaceinvoices\Clients::all($testOrganizationId, $testFilter);
+$all = Spaceinvoices\Clients::find($testOrganizationId, $testFilter);
 var_dump($all);
 
 echo "================= Get by id =================";

@@ -5,7 +5,7 @@ namespace Spaceinvoices;
 class Taxes extends ApiResource {
   const path = "taxes";
 
-  use ApiOperations\All;
+  use ApiOperations\Find;
 	use ApiOperations\Delete;
 	use ApiOperations\Create;
 	use ApiOperations\Edit;

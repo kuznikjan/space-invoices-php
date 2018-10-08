@@ -40,7 +40,7 @@ $paymentId = $create->id;
 var_dump($create);
 
 echo "\n================= Get all =================\n";
-$all = Spaceinvoices\Payments::all($testOrganizationId);
+$all = Spaceinvoices\Payments::find($testOrganizationId);
 var_dump($all);
 
 echo "\n================= Edit =================\n";
@@ -48,7 +48,7 @@ $edit = Spaceinvoices\Payments::edit($paymentId, $testPaymentDataEdit);
 var_dump($edit);
 
 echo "\n================= Get all with filters =================\n";
-$all = Spaceinvoices\Payments::all($testOrganizationId, $testFilter);
+$all = Spaceinvoices\Payments::find($testOrganizationId, $testFilter);
 var_dump($all);
 
 echo "\n================= Delete =================\n";

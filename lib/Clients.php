@@ -5,7 +5,7 @@ namespace Spaceinvoices;
 class Clients extends ApiResource {
   const path = "clients";
 
-  use ApiOperations\All;
+  use ApiOperations\Find;
 	use ApiOperations\Create;
 	use ApiOperations\Delete;
 	use ApiOperations\Edit;

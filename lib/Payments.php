@@ -5,7 +5,7 @@ namespace Spaceinvoices;
 class Payments extends ApiResource {
   const path = "payments";
 
-  use ApiOperations\All;
+  use ApiOperations\Find;
 	use ApiOperations\Delete;
 	use ApiOperations\Edit;
 

@@ -30,7 +30,7 @@ $createRate = Spaceinvoices\Taxes::addANewRateToTax($taxId, $testTaxRateData);
 var_dump($createRate);
 
 echo "\n================= Get all =================\n";
-$all = Spaceinvoices\Taxes::all($testOrganizationId);
+$all = Spaceinvoices\Taxes::find($testOrganizationId);
 var_dump($all);
 
 echo "\n================= Edit =================\n";
@@ -38,7 +38,7 @@ $edit = Spaceinvoices\Taxes::edit($taxId, $testTaxDataEdit);
 var_dump($edit);
 
 echo "\n================= Get all with filters =================\n";
-$all = Spaceinvoices\Taxes::all($testOrganizationId, $testFilter);
+$all = Spaceinvoices\Taxes::find($testOrganizationId, $testFilter);
 var_dump($all);
 
 echo "\n================= Delete =================\n";

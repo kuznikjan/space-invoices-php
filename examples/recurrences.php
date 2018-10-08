@@ -34,7 +34,7 @@ $recurrenceId = $create->id;
 var_dump($create);
 
 echo "\n================= Get all with filters =================\n";
-$all = Spaceinvoices\Recurrences::all($testOrganizationId, $testFilter);
+$all = Spaceinvoices\Recurrences::find($testOrganizationId, $testFilter);
 var_dump($all);
 
 echo "\n================= Delete =================\n";

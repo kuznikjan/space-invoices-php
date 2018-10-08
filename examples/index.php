@@ -1,19 +1,14 @@
 <?php
-include('../lib/Spaceinvoces.php');
 include('../vendor/autoload.php');
 
 // Insert your data here (you can find data by making account on our website: https://spaceinvoices.com)
-// $testToken = "TOKEN";
-// $testOrganizationId = "organizationId";
-// $testAccountId = "accountId";
-
-$testToken = "i3eqlLfw0Z0IyKXLaTXVoD5rxZHhQINrVfBWpIX7Spcbs5Ivurc3A6ZnQQTBPGg2";
-$testOrganizationId = "5b8f857833eeacb278e3afdc";
-$testAccountId = "5b8f851a33eeac2fa6e3afdb";
+$testToken = "TOKEN";
+$testOrganizationId = "organizationId";
+$testAccountId = "accountId";
 
 Spaceinvoices\Spaceinvoices::setAccessToken($testToken);
 
-// common test data
+// Common test data
 $testFilter = array(
   "filter" => array(
     "limit" => 2

@@ -2,7 +2,7 @@
 echo "==================== COMPANIES ====================<br>";
 
 echo "\n================= Get all =================\n";
-$all = Spaceinvoices\Companies::all();
+$all = Spaceinvoices\Companies::find();
 var_dump($all);
 
 echo "\n================= Search =================\n";

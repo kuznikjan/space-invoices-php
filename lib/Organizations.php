@@ -20,7 +20,7 @@ class Organizations extends ApiResource {
    *
    * @return object Returns list of Organizations
   */
-  public static function all($accountId) {
+  public static function find($accountId) {
     return parent::_GET("/accounts/".$accountId."/".static::path)->body;
   }
 
