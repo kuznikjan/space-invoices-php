@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe03ec40587c5da90e03c3e4454cf79b",
+    "content-hash": "5f67719acacaaa72f1536f3cbfbea1e9",
     "packages": [
         {
             "name": "nategood/httpful",
