@@ -1,5 +1,7 @@
 # Space Invoices PHP SDK
 
+[![Join the chat at https://gitter.im/space-invoices/space-invoices-php](https://badges.gitter.im/space-invoices/space-invoices-php.svg)](https://gitter.im/space-invoices/space-invoices-php?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 The Space Invoices SDK provides an easy way to access Space Invoices API from application written PHP.
 
 ## Documentation
