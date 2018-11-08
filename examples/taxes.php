@@ -2,21 +2,19 @@
 echo "==================== TAXES ====================<br>";
 
 $testTaxData = array(
-  "name" => "GST 15",
+  "name" => "Value Added Tax",
+  "abbreviation" => "VAT",
   "_taxRates" => [array(
     "rate" => 15
     )]
 );
 
 $testTaxDataEdit = array(
-  "name" => "GST 20",
-  "_taxRates" => [array(
-    "rate" => 20
-    )]
+  "name" => "Value Added Tax 2"
 );
 
 $testTaxRateData = array(
-  "rate" => 25,
+  "rate" => 20,
   "dateValidFrom" => "2018-01-01"
 );
 
