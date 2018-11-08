@@ -51,6 +51,10 @@ echo "\n================= Get all with filters =================\n";
 $all = Spaceinvoices\Payments::find($testOrganizationId, $testFilter);
 var_dump($all);
 
+echo "\n================= Get all payments for document =================\n";
+$allDocument = Spaceinvoices\Payments::findDocumentPayments($docId);
+var_dump($allDocument);
+
 echo "\n================= Delete =================\n";
 $delete = Spaceinvoices\Payments::delete($paymentId);
 var_dump($delete);

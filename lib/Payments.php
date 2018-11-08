@@ -19,5 +19,14 @@ class Payments extends ApiResource {
     return parent::_POST("/documents/".$documentId."/".static::path, $data)->body;
   }
 
+  /**
+   * @param string $documentId ID of Document we are creating Payment for
+   *
+   * @return object Returns object data
+  */
+  public static function findDocumentPayments($documentId) {
+    return parent::_GET("/documents/".$documentId."/".static::path)->body;
+  }
+
 }
 ?>

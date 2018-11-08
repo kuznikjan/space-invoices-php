@@ -37,6 +37,10 @@ echo "\n================= Get all with filters =================\n";
 $all = Spaceinvoices\Recurrences::find($testOrganizationId, $testFilter);
 var_dump($all);
 
+echo "\n================= Get all recurrences for document =================\n";
+$allDocument = Spaceinvoices\Recurrences::findDocumentRecurrences($docId);
+var_dump($allDocument);
+
 echo "\n================= Delete =================\n";
 $delete = Spaceinvoices\Recurrences::delete($recurrenceId);
 var_dump($delete);

@@ -7,3 +7,8 @@
 * Added Countries endpoint
 * Updated Tax examples
 * Added VERSION file
+
+## 1.0.1 - 08-11-2018
+
+* Added `findDocumentPayments()` method for Payments
+* Added `findDocumentRecurrences()` method for Recurrences

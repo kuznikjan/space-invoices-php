@@ -17,5 +17,15 @@ class Recurrences extends ApiResource {
   public static function create($documentId, $data) {
     return parent::_POST("/documents/".$documentId."/recurrence", $data)->body;
   }
+
+  /**
+   * @param string $documentId ID of Document we are creating Payment for
+   *
+   * @return object Returns object data
+  */
+  public static function findDocumentRecurrences($documentId) {
+    return parent::_GET("/documents/".$documentId."/recurrence")->body;
+  }
+
 }
 ?>
