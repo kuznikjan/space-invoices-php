@@ -13,7 +13,12 @@ $testOrgData = array(
 
 echo "================= Create =================";
 $create = Spaceinvoices\Organizations::create($testAccountId, $testOrgData);
+$orgId = $create->id;
 var_dump($create);
+
+echo "================= Get by id =================";
+$get = Spaceinvoices\Organizations::getById($orgId);
+var_dump($get);
 
 echo "================= All =================";
 $list = Spaceinvoices\Organizations::find($testAccountId);

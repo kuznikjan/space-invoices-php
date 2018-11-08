@@ -3,7 +3,9 @@
 namespace Spaceinvoices;
 
 class Organizations extends ApiResource {
-	const path = "organizations";
+  const path = "organizations";
+
+  use ApiOperations\GetById;
 
   /**
    * @param string $accountId ID of Account
