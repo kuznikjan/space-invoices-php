@@ -5,3 +5,5 @@
 * Added `getById()` method for Organizations
 * Added `uploadImage()` method for Organizations (uploading logo and signature)
 * Added Countries endpoint
+* Updated Tax examples
+* Added VERSION file
