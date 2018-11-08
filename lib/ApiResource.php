@@ -42,7 +42,6 @@ abstract class ApiResource {
 		$response = ApiResource::errorHandler($response);
 		return $response;
 	}
-
 	public static function _DELETE($url) {
 		$real_url = \Spaceinvoices\Spaceinvoices::$apiBaseUrl.$url;
 
@@ -54,7 +53,6 @@ abstract class ApiResource {
 		$response = ApiResource::errorHandler($response);
 		return $response;
 	}
-
 	public static function _PDF($url,$lang) {
 		$real_url = \Spaceinvoices\Spaceinvoices::$apiBaseUrl.$url;
 
@@ -76,6 +74,17 @@ abstract class ApiResource {
 		$response = ApiResource::errorHandler($response);
 		return $response;
 	}
+	public static function _IMG($url,$image,$type) {
+		$real_url = \Spaceinvoices\Spaceinvoices::$apiBaseUrl.$url;
+
+		$response = \Httpful\Request::post($real_url)
+			->attach(array($image))
+			->addHeader('Authorization', \Spaceinvoices\Spaceinvoices::getAccessToken())
+			->send();
+
+		$response = ApiResource::errorHandler($response);
+		return $response;
+	}
 
 	public static function errorHandler($response) {
 		$code = $response->code;
@@ -83,8 +92,10 @@ abstract class ApiResource {
 			return $response;
 		}
 
-		$response->body->error->name = ApiResource::responseCodeName($code);
-		$response->body->error->text = ApiResource::responseCodeText($code);
+		if (isset($response->body->error)) {
+			$response->body->error->name = ApiResource::responseCodeName($code);
+			$response->body->error->text = ApiResource::responseCodeText($code);
+		}
 
 		return $response;
 	}

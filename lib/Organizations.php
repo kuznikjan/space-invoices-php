@@ -26,5 +26,16 @@ class Organizations extends ApiResource {
     return parent::_GET("/accounts/".$accountId."/".static::path)->body;
   }
 
+  /**
+   * @param string $organizationId 	ID of Organization to set image for
+   * @param string $type The type of image we are uploading
+   * @param string $image Path to image (absolute path)
+   *
+   * @return boolean Boolean true if request was succesful
+  */
+  public static function uploadImage($organizationId, $image, $type = "logo") {
+    return parent::_IMG("/".static::path."/".$organizationId."/upload-image?type=".$type, $image, $type)->body;
+  }
+
 }
 ?>
