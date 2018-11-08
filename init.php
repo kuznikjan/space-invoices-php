@@ -16,6 +16,7 @@ include(dirname(__FILE__) . '/lib/Accounts.php');
 include(dirname(__FILE__) . '/lib/Clients.php');
 include(dirname(__FILE__) . '/lib/Companies.php');
 include(dirname(__FILE__) . '/lib/Currencies.php');
+include(dirname(__FILE__) . '/lib/Countries.php');
 include(dirname(__FILE__) . '/lib/Documents.php');
 include(dirname(__FILE__) . '/lib/Items.php');
 include(dirname(__FILE__) . '/lib/Organizations.php');

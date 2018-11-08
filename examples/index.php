@@ -21,6 +21,7 @@ $testFilter = array(
 // include('./organizations.php');
 // include('./documents.php');
 // include('./currencies.php');
+// include('./countries.php');
 // include('./clients.php');
 // include('./items.php');
 // include('./payments.php');
