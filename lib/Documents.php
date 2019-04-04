@@ -18,7 +18,7 @@ class Documents extends ApiResource {
    *
    * @return object
   */
-  public static function send($documentId, $data, $lang = "sl") {
+  public static function send($documentId, $data, $lang = false) {
 		if ($lang) {
 			return parent::_POST("/".static::path."/".$documentId."/send?l=".$lang, $data)->body;
 		}
@@ -33,7 +33,10 @@ class Documents extends ApiResource {
   */
 
 	public static function getPdf($documentId, $lang = false) {
-    return parent::_PDF("/".static::path."/".$documentId."/pdf", $lang)->body;
+    if ($lang) {
+      return parent::_PDF("/".static::path."/".$documentId."/pdf?l=".$lang)->body;
+    }
+    return parent::_PDF("/".static::path."/".$documentId."/pdf")->body;
   }
 }
 ?>

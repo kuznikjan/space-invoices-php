@@ -53,23 +53,14 @@ abstract class ApiResource {
 		$response = ApiResource::errorHandler($response);
 		return $response;
 	}
-	public static function _PDF($url,$lang) {
+	public static function _PDF($url) {
 		$real_url = \Spaceinvoices\Spaceinvoices::$apiBaseUrl.$url;
 
-		if ($lang) {
-			$response = \Httpful\Request::get($real_url)
-				->sendsJson()
-				->body('{}')
-				->addHeader('Authorization', \Spaceinvoices\Spaceinvoices::getAccessToken())
-				->addHeader('l', $lang)
-				->send();
-		} else {
-			$response = \Httpful\Request::get($real_url)
-				->sendsJson()
-				->body('{}')
-				->addHeader('Authorization', \Spaceinvoices\Spaceinvoices::getAccessToken())
-				->send();
-		}
+		$response = \Httpful\Request::get($real_url)
+			->sendsJson()
+			->body('{}')
+			->addHeader('Authorization', \Spaceinvoices\Spaceinvoices::getAccessToken())
+			->send();
 
 		$response = ApiResource::errorHandler($response);
 		return $response;
