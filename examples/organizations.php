@@ -28,4 +28,8 @@ var_dump($get);
 echo "================= All =================";
 $list = Spaceinvoices\Organizations::find($testAccountId);
 var_dump($list);
+
+echo "================= Business Premises =================";
+$bp = Spaceinvoices\Organizations::getBusinessPremises($orgId);
+var_dump($bp);
 ?>

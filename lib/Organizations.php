@@ -37,5 +37,14 @@ class Organizations extends ApiResource {
     return parent::_IMG("/".static::path."/".$organizationId."/upload-image?type=".$type, $image, $type)->body;
   }
 
+    /**
+   * @param string $organizationId 	ID of Organization
+   *
+   * @return object Returns list of Business Premises
+  */
+  public static function getBusinessPremises($organizationId) {
+    return parent::_GET("/".static::path."/".$organizationId."/businessPremises?filter[include]=electronicDevices")->body;
+  }
+
 }
 ?>
